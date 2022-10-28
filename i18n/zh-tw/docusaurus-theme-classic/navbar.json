@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "ShihTing's Blog",
+    "description": "The title in the navbar"
+  },
+  "item.label.Notes": {
+    "message": "筆記",
+    "description": "Navbar item with label Notes"
+  },
+  "item.label.Blog": {
+    "message": "部落格",
+    "description": "Navbar item with label Blog"
+  }
+}
