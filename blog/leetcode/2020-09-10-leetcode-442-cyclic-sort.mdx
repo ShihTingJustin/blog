@@ -1,6 +1,6 @@
 ---
 slug: 2020-09-10-leetcode-442-cyclic-sort
-title: "[Leetcode with JavaScript] 刷題筆記 — 特殊方法 Cyclic Sort"
+title: '[Leetcode with JavaScript] 刷題筆記 — 特殊方法 Cyclic Sort'
 authors: [shihting]
 tags: [softwareEngineer, leetcode, leetcode442, cyclicSort]
 ---
@@ -12,6 +12,8 @@ source: [https://zecwang.com/2020/05/11/coding%20interview/pattern%20-%20cyclic%
 ### 前言
 
 這是最近刷 Leetcode 學習到的特殊方法，適合在需要排序且題目要求 in-place，也就是空間複雜度 O(1) 的狀況下使用(使用的記憶體不會隨輸入資料增加而增加)；它的時間複雜度為 O(n) 也比一般 `sort()` 更好 O(n²)。這個方法我覺得直接看範例就很容易懂了～
+
+<!--truncate-->
 
 ### 舉例
 
@@ -32,39 +34,37 @@ Cyclic Sort 是利用陣列元素當作 targetIndex，也就是元素應該要�
 
 ```javascript
 function cyclicSort(nums) {
-  let index = 0   // 目前指向的元素
-  
+  let index = 0; // 目前指向的元素
+
   while (index < nums.length) {
     // 利用陣列元素值當作 targetIndex
     // 也就是目前的元素應該要在的位置
-    const targetIndex = nums[index]
-    
+    const targetIndex = nums[index];
+
     // 若目前元素不在正確的位置，則與該位置的元素互換
     if (nums[index] !== nums[targetIndex]) {
       // 利用解構賦值方法讓兩個元素互換
-      [nums[index], nums[targetIndex]] = [nums[targetIndex], nums[index]] 
+      [nums[index], nums[targetIndex]] = [nums[targetIndex], nums[index]];
     } else {
       // 若元素已經在正確的位置，則往下一個元素看
-      index++
+      index++;
     }
   }
-  return nums
+  return nums;
 }
 
-console.log(cyclicSort([3,1,0,2])) // [0, 1, 2, 3]
+console.log(cyclicSort([3, 1, 0, 2])); // [0, 1, 2, 3]
 ```
-
-
 
 如果可以理解的話，就馬上來做一題試試吧！
 
 ### 442. Find All Duplicates in an Array
 
-> Given an array of integers, 1 ≤ a[i] ≤ *n* (*n* = size of array), some elements appear **twice** and others appear **once**.
+> Given an array of integers, 1 ≤ a[i] ≤ _n_ (_n_ = size of array), some elements appear **twice** and others appear **once**.
 
 > Find all the elements that appear **twice** in this array.
 
-> Could you do it without extra space and in O(*n*) runtime?
+> Could you do it without extra space and in O(_n_) runtime?
 
 **Example:**
 
@@ -83,33 +83,30 @@ Output:
 2. 找出陣列中與 index 不符合的元素
 
 ```javascript
-var findDuplicates = function(nums) {
-    let result = []
-    let index = 0
-    while (index < nums.length) {
-      // 符合題目規定的範圍 1 ≤ a[i] ≤ n
-      const targetIndex = nums[index] - 1
-      if (nums[index] !== nums[targetIndex]) {
-        [nums[index], nums[targetIndex]] = [nums[targetIndex], nums[index]]
-      } else {
-        index++
-      }
+var findDuplicates = function (nums) {
+  let result = [];
+  let index = 0;
+  while (index < nums.length) {
+    // 符合題目規定的範圍 1 ≤ a[i] ≤ n
+    const targetIndex = nums[index] - 1;
+    if (nums[index] !== nums[targetIndex]) {
+      [nums[index], nums[targetIndex]] = [nums[targetIndex], nums[index]];
+    } else {
+      index++;
     }
-    // 若有元素與index不同,就代表這個數字是重複的
-    for (let i = 0; i < nums.length; i++) {
-      if (nums[i] !== i + 1) result.push(nums[i])
-    }
-  return result
+  }
+  // 若有元素與index不同,就代表這個數字是重複的
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== i + 1) result.push(nums[i]);
+  }
+  return result;
 };
 ```
-
-
 
 這題解法為了符合題目規定的數字範圍，要在 `targetIndex`的值 `-1`，才不會變成 0 導致出現 undefined 哦。
 
 ### Reference
 
-1. [javascript leetcode刷題筆記-coding pattern:Cyclic Sort](https://eruditeness.news.blog/2020/08/26/javascript-leetcode刷題筆記-coding-patterncyclic-sort/)
+1. [javascript leetcode 刷題筆記-coding pattern:Cyclic Sort](https://eruditeness.news.blog/2020/08/26/javascript-leetcode刷題筆記-coding-patterncyclic-sort/)
 2. [Leetcode 刷題 pattern — Cyclic Sort](https://blog.techbridge.cc/2020/02/16/leetcode-刷題-pattern-cyclic-sort/)
 3. [[YouTube\] Cycle Sort](https://www.youtube.com/watch?v=ZSJGf5Ngw18)
-

@@ -1,6 +1,6 @@
 ---
 slug: 2020-08-30-leetcode-popular-approach
-title: "[Leetcode with JavaScript] 刷題筆記 - 刷題常用的三種解法 Brute Force, Hash Map, Two Pointers"
+title: '[Leetcode with JavaScript] 刷題筆記 - 刷題常用的三種解法 Brute Force, Hash Map, Two Pointers'
 authors: [shihting]
 tags: [softwareEngineer, leetcode, leetcode1, leetcode15, bruteForce, hashMap, twoPointers]
 ---
@@ -14,11 +14,13 @@ Source: https://www.toptal.com/javascript/comprehensive-guide-javascript-design-
 
 這篇文章會透過上千題中 Leetcode 的第一題[Two Sum](https://leetcode.com/problems/two-sum/) 及進階題 [3Sum](https://leetcode.com/problems/3sum/)，來說明三種基本的解題方法，分別是**暴力解(Brute Force)**、**雜湊表 Hash Table**、**雙指針 Two Pointers**。如果你和我一樣是剛開始刷題的話，那就繼續看下去吧～
 
+<!--truncate-->
+
 ### #1 Two Sum (Easy)
 
-> Given an array of integers `nums` and and integer `target`, return *the indices of the two numbers such that they add up to* `*target*`.
+> Given an array of integers `nums` and and integer `target`, return _the indices of the two numbers such that they add up to_ `*target*`.
 
-> You may assume that each input would have ***exactly\* one solution**, and you may not use the *same* element twice.
+> You may assume that each input would have **\*exactly\* one solution**, and you may not use the _same_ element twice.
 
 > You can return the answer in any order.
 
@@ -39,20 +41,18 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1]
 不過使用巢狀迴圈的缺點就是很費時，時間複雜度也會變成 O(n^2)，所以可以看到 Runtime 只比 17.9% 的人快。Memory Usage 則是因為沒有宣告新的變數，直接使用迴圈的 index 所以表現不錯。
 
 ```javascript
-var twoSum = function(nums, target) {
-    for(let i = 0 ; i < nums.length ; i++) {
-        for(let j = i ; j < nums.length ; j++ ) {
-            if (i !== j && nums[i] + nums[j] === target) {
-                return [i, j];
-            }
-        }
+var twoSum = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i; j < nums.length; j++) {
+      if (i !== j && nums[i] + nums[j] === target) {
+        return [i, j];
+      }
     }
+  }
 };
 ```
 
 ![1_lx9WPQXvJxxPXXk_63guuQ](https://i.imgur.com/nefsG58.jpg)
-
-
 
 ### 雜湊表 Hash Table
 
@@ -61,20 +61,18 @@ var twoSum = function(nums, target) {
 與暴力解相比，Hash Table 的優點是有效降低時間複雜度(O(n))，可以看到 Runtime 快很多，代價是要使用比較多的記憶體空間。**Hash Table 最大的好處是 input 不需要是 sorted array 也能使用。**
 
 ```javascript
-var twoSum = function(nums, target) {
-    let map = {}
-    for (let i = 0; i < nums.length; i++) {
-      let num1 = nums[i]
-      let num2 = target - num1
-      if (map[num2] >= 0) {
-        return [map[num2], i]
-      }
-      map[num1] = i
-    }    
+var twoSum = function (nums, target) {
+  let map = {};
+  for (let i = 0; i < nums.length; i++) {
+    let num1 = nums[i];
+    let num2 = target - num1;
+    if (map[num2] >= 0) {
+      return [map[num2], i];
+    }
+    map[num1] = i;
+  }
 };
 ```
-
-
 
 ![1_MZzczpwfuS84sZo_kyE7lw](https://i.imgur.com/E9QzlHy.jpg)
 
@@ -82,7 +80,7 @@ var twoSum = function(nums, target) {
 
 ### #15 3Sum (Medium)
 
-> Given an array `nums` of *n* integers, are there elements *a*, *b*, *c* in `nums` such that *a* + *b* + *c* = 0? Find all unique triplets in the array which gives the sum of zero.
+> Given an array `nums` of _n_ integers, are there elements _a_, _b_, _c_ in `nums` such that _a_ + _b_ + _c_ = 0? Find all unique triplets in the array which gives the sum of zero.
 
 > **Note:**
 
@@ -114,38 +112,38 @@ A solution set is:
  * @param {number[]} nums
  * @return {number[][]}
  */
-var threeSum = function(nums) {
-    nums.sort((a, z) => a - z)
-    const result = []
-    
-    for (let i = 0; i < nums.length; i++) {
-      // 固定第一個數字
-      const num = nums[i]
-      if (num > 0) break  // 因為sort過，所以第一個數字大於零，代表整個nums都是正整數
-      if (num === nums[i - 1]) continue  // 若連續兩個數字相同，就繼續執行
-        
-      const ans = -num   // 要找 num 的相反數
-      let left = i + 1   // 左指針的index
-      let right = nums.length - 1   // 右指針的index
-      
-      while (left < right) {     // 當左指針小於右指針就執行
-        if (nums[left] + nums[right] === ans) {
-          result.push([num, nums[left], nums[right]]) 
-          left++  // 找到一組解就讓左右指針向中間夾
-          right--
+var threeSum = function (nums) {
+  nums.sort((a, z) => a - z);
+  const result = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    // 固定第一個數字
+    const num = nums[i];
+    if (num > 0) break; // 因為sort過，所以第一個數字大於零，代表整個nums都是正整數
+    if (num === nums[i - 1]) continue; // 若連續兩個數字相同，就繼續執行
+
+    const ans = -num; // 要找 num 的相反數
+    let left = i + 1; // 左指針的index
+    let right = nums.length - 1; // 右指針的index
+
+    while (left < right) {
+      // 當左指針小於右指針就執行
+      if (nums[left] + nums[right] === ans) {
+        result.push([num, nums[left], nums[right]]);
+        left++; // 找到一組解就讓左右指針向中間夾
+        right--;
         // 左右指針移動過程中碰到重複的數字要跳過
-          while (left < right && nums[left] === nums[left - 1]) left++
-          while (left < right && nums[right] === nums[right + 1]) right--
-        } else if (nums[left] + nums[right] < ans) {
-          left++
-          while (left < right && nums[left] === nums[left - 1]) left++
-        } else {
-          right--
-          while (left < right && nums[right] === nums[right + 1]) right--
-        }
+        while (left < right && nums[left] === nums[left - 1]) left++;
+        while (left < right && nums[right] === nums[right + 1]) right--;
+      } else if (nums[left] + nums[right] < ans) {
+        left++;
+        while (left < right && nums[left] === nums[left - 1]) left++;
+      } else {
+        right--;
+        while (left < right && nums[right] === nums[right + 1]) right--;
       }
     }
-  return result
+  }
+  return result;
 };
 ```
-

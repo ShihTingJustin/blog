@@ -12,6 +12,8 @@ source: https://www.dresden.de/de/rathaus/aktuelles/pressemitteilungen/2019/11/p
 
 終於來到了學期三期末的協作專案了，這個專案可以選擇用熟悉的全端開發架構，或是使用初接觸的前後端分離開發架構，打造 SPA (single-page application)。不過由於這屆前端課程的同學很少，所以多數組別都是使用全端開發架構，我跟 Harry 很幸運找到一位前端的夥伴 Ivy 組隊，終於可以體驗一下傳說中的前後端分離開發架構啦～
 
+<!--truncate-->
+
 ### 基本分工
 
 前端 Vue.js 由 Ivy 負責，後端 Node.js + Express.js 搭配 MySQL 由我(兼組長)和 Harry 負責。由於 Ivy 是在職前端工程師，所以已經預期會有部分前端刻板工作需要後端支援。
@@ -44,7 +46,7 @@ source: https://www.dresden.de/de/rathaus/aktuelles/pressemitteilungen/2019/11/p
 
 Simple Twitter 開發的要求分為指定功能及挑戰功能，指定功能除了正常運作之外，還要能夠通過 AC 撰寫的自動化測試。
 
-剛開始和 Harry 兩個人花了三天照著自己的意思把後端 API 建置起來，信心滿滿的跑自動化測試，跑完看著滿江紅的終端機畫面，當時還覺得很有趣，想說靠怎麼沒有一條路由是通過的😂，殊不知自己正踏入 debug 地獄中...
+剛開始和 Harry 兩個人花了三天照著自己的意思把後端 API 建置起來，信心滿滿的跑自動化測試，跑完看著滿江紅的終端機畫面，當時還覺得很有趣，想說靠怎麼沒有一條路由是通過的 😂，殊不知自己正踏入 debug 地獄中...
 
 bug 的分類大概可以分成三種：
 
@@ -53,7 +55,7 @@ bug 的分類大概可以分成三種：
 2. API 回傳的資料與測試要求不符合造成的 bug
    這種 bug 通常可以從錯誤訊息及自動化測試的程式碼中發現，像測試的要求是回傳一個陣列，但我們回傳的是一個物件，那就會出現錯誤。
 3. 神奇的 bug
-   這次每一組都有遇到 Like Model 的 id 在跑SQL 時無法自動讀取，造成自動化測試一直失敗的狀況，在兩個人 debug 許久後，我強大的隊友 Harry 想到直接把 id 手動寫進 model 的方法，才成功通過測試。向 AC 回報時，維元老師看了也是嘖嘖稱奇，只能說程式的世界真是無奇不有🤔。
+   這次每一組都有遇到 Like Model 的 id 在跑 SQL 時無法自動讀取，造成自動化測試一直失敗的狀況，在兩個人 debug 許久後，我強大的隊友 Harry 想到直接把 id 手動寫進 model 的方法，才成功通過測試。向 AC 回報時，維元老師看了也是嘖嘖稱奇，只能說程式的世界真是無奇不有 🤔。
 
 ![1_G7Br5dze8LVjHYJnzMzL6Q](https://i.imgur.com/i1VdJke.png)
 Reply Model 會自動 INSERT id
@@ -61,16 +63,15 @@ Reply Model 會自動 INSERT id
 ![1_zy0GP_qbPABjGa49Spp3pQ](https://i.imgur.com/JgyNwTy.png)
 Like Model 就是不會…
 
-後端經歷過整整一週兩個人每天開 Zoom 分享螢幕進行 live degug 的 debug 地獄之後，終於迎來了全數通過自動化測試的這個 moment，眼淚差點都要滴下來了😭，但是專案還沒結束呀，還要繼續衝刺才行！
+後端經歷過整整一週兩個人每天開 Zoom 分享螢幕進行 live degug 的 debug 地獄之後，終於迎來了全數通過自動化測試的這個 moment，眼淚差點都要滴下來了 😭，但是專案還沒結束呀，還要繼續衝刺才行！
 
 ![1_kLk8UfoedGVRj5xK7-rYEw](https://i.imgur.com/fxsVuwJ.png)
 
 #### 部署 API server
 
-部署 Heroku 的過程也是花了比預期多的時間，主要問題在於環境變數 NODE_ENV 的設定，短短 3 行 code 寫了 3 個小時...只能怪自己忘記 Heroku 還有 Procfile 要設定😵。
+部署 Heroku 的過程也是花了比預期多的時間，主要問題在於環境變數 NODE_ENV 的設定，短短 3 行 code 寫了 3 個小時...只能怪自己忘記 Heroku 還有 Procfile 要設定 😵。
 
 ![1_YlJ1hPPSjtNTSeB84d5nNw](https://i.imgur.com/ImhnFaS.jpg)
-
 
 ![1_L3CU729g_3JYTE8ERU0lRg](https://i.imgur.com/BKoziHe.png)
 
@@ -78,12 +79,12 @@ Like Model 就是不會…
 
 指定功能的開發及 debug 就耗掉了一週的時間，加上有些 bug 需要等 AC 更新才能繼續開發，所以在等待期間我們也沒閒著，持續研究 ngrok 及 socket.io 的用法，我也順手將 ngrok 的設定過程寫成懶人包供大家參考。
 
-[**5分鐘完成 ngrok 設定(Mac)**
+[**5 分鐘完成 ngrok 設定(Mac)**
 *ngrok 是一個可以快速讓外網連接本機 localhost 的工具，話不多說，六個步驟帶你快速完成設定！*medium.com](https://medium.com/@mercedes722s/5分鐘完成-ngrok-設定-mac-6cedab20bc21)
 
 過程中前端夥伴因為工作關係無法準時完成進度，加上我和 Harry 都不諳 Vue.js ，只好當機立斷，臨時改用全端開發架構來完成即時聊天室。
 
-挑戰功能是採用黑客松的方式，在48小時內盡可能的開發，所以改用全端開發架構也代表，我們需要從零開始刻畫面並且在48小時內完成😵，由於我在指定功能階段就有支援前端一些簡單的畫面，所以畫面由我負責，Harry 則基於我們之前研究的 socket.io 基礎，繼續開發私訊、通知等其他功能。
+挑戰功能是採用黑客松的方式，在 48 小時內盡可能的開發，所以改用全端開發架構也代表，我們需要從零開始刻畫面並且在 48 小時內完成 😵，由於我在指定功能階段就有支援前端一些簡單的畫面，所以畫面由我負責，Harry 則基於我們之前研究的 socket.io 基礎，繼續開發私訊、通知等其他功能。
 
 兩個人經過兩天幾乎沒睡的密集開發，最終結果還算滿意，真的是 盡 · 全 · 力了。
 
@@ -152,4 +153,3 @@ Ivy 一開始就分享了許多業界的做法，像是後端在撈資料時可�
 ### 後記
 
 指定功能完成會再放上來的 😎
-

@@ -11,6 +11,8 @@ tags: [ac, alphacamp, bootcamp, careerChange, softwareEngineer]
 
 在寫作業時開始感受到前後端的區別，不論在 server 端多麼用力的使用 BOM or DOM 的相關語法，除了噴紅字以外是不會有任何回應的 😂
 
+<!--truncate-->
+
 ![0_gTMTcGPVAuwZI8cX](https://i.imgur.com/IIa8RIX.jpg)
 
 在寫老爸私房錢的作業時，想要操作兩個 Schema 來 create 消費的資料及種類的資料，想將`Category.find()`撈出來的資料拿到`Record.create()`裡面用
@@ -40,8 +42,6 @@ db.once('open', () => {
 })
 ```
 
-
-
 結果發現不行，只能把`Record.create()`寫在`Category.find(`的 `.then()`裡面。如果還有要執行的動作，就要一直`.then()`下去...
 
 ```javascript
@@ -50,25 +50,22 @@ db.once('open', () => {
 
   Category.find()
     .lean()
-    .then(cates => {
+    .then((cates) => {
       console.log(cates); // 這邊有看到資料
-      
+
       for (let i = 0; i < 10; i++) {
         Record.create({
           category: 這邊要用,
           name: pickName(),
           date: pickDate(),
-          amount: Math.floor(Math.random() * 500 + 50),
+          amount: Math.floor(Math.random() * 500 + 50)
         });
       }
     });
 
-
   console.log('done!');
 });
 ```
-
-
 
 原來這就是非同步操作著名的 callback hell...我寫兩層就覺得不太對勁了，下面這種到底...
 
@@ -89,20 +86,16 @@ db.once('open', () => {
 好在這個專案我已經逐步摸索出非同步的寫法，現在學期三的作業也需要用到非同步的寫法，使用起來就更加順手，不過還是要在學期三從頭學習 callback, Promise, async / await 演進的過程與精進的寫法。
 
 ```javascript
- async function shortenAsyncAwait() {
-    const value = await urlCheck()
-    const value1 = await generateShortURL(value, url)
-    const value2 = await checkShortUrlDuplicated(value1)
-    const value3 = await createData(value2)
-    const previewData = await linkPreviewGenerator(url)
-    const value4 = await saveThumbnail(value3, previewData)
-  }
-  shortenAsyncAwait()
+async function shortenAsyncAwait() {
+  const value = await urlCheck();
+  const value1 = await generateShortURL(value, url);
+  const value2 = await checkShortUrlDuplicated(value1);
+  const value3 = await createData(value2);
+  const previewData = await linkPreviewGenerator(url);
+  const value4 = await saveThumbnail(value3, previewData);
+}
+shortenAsyncAwait();
 ```
-
-
-
-
 
 首次嘗試暗色系的 UI 配置，有種神秘的感覺。
 
