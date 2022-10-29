@@ -253,5 +253,29 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "body.feature.title.left": {
+    "message": "Technical note",
+    "description": "The title of the left feature in body"
+  },
+  "body.feature.title.center": {
+    "message": "Articles",
+    "description": "The title of the center feature in body"
+  },
+  "body.feature.title.right": {
+    "message": "Portfolio",
+    "description": "The title of the right feature in body"
+  },
+  "body.feature.content.left": {
+    "message": "技術筆記",
+    "description": "The content of the left feature in body"
+  },
+  "body.feature.content.center": {
+    "message": "文章",
+    "description": "The content of the center feature in body"
+  },
+  "body.feature.content.right": {
+    "message": "作品集",
+    "description": "The content of the right feature in body"
   }
 }

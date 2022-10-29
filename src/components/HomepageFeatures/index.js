@@ -1,41 +1,27 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Translate from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and used to get your
-        website up and running quickly.
-      </>
-    ),
+    title: <Translate id="body.feature.title.left">Technical note</Translate>,
+    Svg: require('@site/static/img/code_review_dark.svg').default,
+    description: <Translate id="body.feature.content.left"></Translate>,
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your
-        docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: <Translate id="body.feature.title.center">Articles</Translate>,
+    Svg: require('@site/static/img/programming_dark.svg').default,
+    description: <Translate id="body.feature.content.center"></Translate>,
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can be extended while
-        reusing the same header and footer.
-      </>
-    ),
+    title: <Translate id="body.feature.title.right">Portfolio</Translate>,
+    Svg: require('@site/static/img/responsive_dark.svg').default,
+    description: <Translate id="body.feature.content.right"></Translate>,
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ Svg, title, description, to }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
