@@ -10,5 +10,9 @@
   "item.label.Blog": {
     "message": "部落格",
     "description": "Navbar item with label Blog"
+  },
+  "item.label.Portfolio": {
+    "message": "作品集",
+    "description": "Navbar item with label Portfolio"
   }
 }
