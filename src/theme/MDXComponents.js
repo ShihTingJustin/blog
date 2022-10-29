@@ -6,5 +6,5 @@ import MDXImg from './MDXComponents/Img';
 export default {
   // Re-use the default mapping
   ...MDXComponents,
-  MDXImg
+  MDXImg,
 };
