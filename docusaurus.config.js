@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "ShihTing's Blog",
-  tagline: 'Dinosaurs are cool',
+  tagline: "It's what you do in the dark that puts you in the light.",
   url: 'https://www.sthdev.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -70,7 +70,16 @@ const config = {
             position: 'left',
             label: 'Notes',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left',
+          },
+          {
+            to: '/portfolio',
+            label: 'Portfolio',
+            position: 'left',
+          },
           {
             type: 'localeDropdown',
             position: 'right',
@@ -127,6 +136,39 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve('swc-loader'),
+      options: {
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+            tsx: true,
+          },
+          target: 'es2017',
+        },
+        module: {
+          type: isServer ? 'commonjs' : 'es6',
+        },
+      },
+    }),
+  },
+
+  plugins: [
+    [
+      'ideal-image',
+      /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
+      ({
+        quality: 70,
+        max: 1030,
+        min: 640,
+        steps: 2,
+        // Use false to debug, but it incurs huge perf costs
+        disableInDev: true,
+      }),
+    ],
+  ],
 };
 
 module.exports = config;
