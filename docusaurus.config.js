@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-tw',
-    locales: ['zh-tw', 'en']
+    locales: ['zh-tw', 'en'],
   },
 
   presets: [
@@ -37,7 +37,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           postsPerPage: 8,
@@ -46,13 +46,13 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css')
-        }
-      })
-    ]
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
+    ],
   ],
 
   themeConfig:
@@ -63,21 +63,21 @@ const config = {
         logo: {
           alt: 'Site Logo',
           src: 'img/logo.svg',
-          srcDark: 'img/logoDark.svg'
+          srcDark: 'img/logoDark.svg',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Notes'
+            label: 'Notes',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             type: 'localeDropdown',
-            position: 'right'
-          }
-        ]
+            position: 'right',
+          },
+        ],
       },
       footer: {
         style: 'dark',
@@ -87,22 +87,22 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/ShihTingJustin'
+                href: 'https://github.com/ShihTingJustin',
               },
               {
                 label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/justinhuang777'
-              }
-            ]
-          }
+                href: 'https://www.linkedin.com/in/justinhuang777',
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} sthdev.app, Inc. Built with Docusaurus.`
+        copyright: `Copyright © ${new Date().getFullYear()} sthdev.app, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme
-      }
-    })
+        darkTheme: darkCodeTheme,
+      },
+    }),
 };
 
 module.exports = config;
