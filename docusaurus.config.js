@@ -96,7 +96,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} sthdev.app, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ShihTing's Blog, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

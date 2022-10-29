@@ -10,9 +10,5 @@
   "link.item.label.LinkedIn": {
     "message": "LinkedIn",
     "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/in/justinhuang777"
-  },
-  "copyright": {
-    "message": "Copyright © 2022 sthdev.app, Inc. Built with Docusaurus.",
-    "description": "The footer copyright"
   }
 }
