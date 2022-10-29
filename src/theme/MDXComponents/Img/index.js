@@ -12,7 +12,7 @@ export default function MDXImg(props) {
       {!!props.source && (
         <div>
           <small>Source: </small>
-          <a href={props.source}>
+          <a href={props.source} target="_blank">
             <small>{props.source}</small>
           </a>
         </div>
