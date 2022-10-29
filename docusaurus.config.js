@@ -86,7 +86,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'More',
@@ -98,6 +98,26 @@ const config = {
               {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/justinhuang777',
+              },
+            ],
+          },
+          {
+            title: 'Stack',
+            items: [
+              {
+                label: 'React.js',
+                href: 'https://reactjs.org',
+              },
+              {
+                label: 'Docusaurus',
+                href: 'https://docusaurus.io/',
+              },
+              {
+                html: `
+        <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+         <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+         </a>
+        `,
               },
             ],
           },

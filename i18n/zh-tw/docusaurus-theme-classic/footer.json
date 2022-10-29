@@ -10,5 +10,9 @@
   "link.item.label.LinkedIn": {
     "message": "LinkedIn",
     "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/in/justinhuang777"
+  },
+  "link.title.Stack": {
+    "message": "技術棧",
+    "description": "The title of the footer links column with title=Stack in the footer"
   }
 }
