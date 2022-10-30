@@ -277,5 +277,9 @@
   "body.feature.content.right": {
     "message": "作品集",
     "description": "The content of the right feature in body"
+  },
+  "portfolio.filters.resultCount.plurals": {
+    "message": "1 site|{sitesCount} sites",
+    "description": "The filter result of portfolio page"
   }
 }

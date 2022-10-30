@@ -277,5 +277,9 @@
   "body.feature.content.right": {
     "message": "個人作品集，主題有自己發想的，也有 clone 或面試的作業，部分作品有開放原始碼",
     "description": "The content of the right feature in body"
+  },
+  "portfolio.filters.resultCount.plurals": {
+    "message": "{sitesCount} 網頁",
+    "description": "The filter result of portfolio page"
   }
 }
