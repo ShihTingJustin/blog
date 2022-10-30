@@ -243,7 +243,17 @@ function ShowcaseCards() {
 
   return (
     <section className="margin-top--lg margin-bottom--xl">
-      {filteredUsers.length === sortedUsers.length ? (
+      <div className="container">
+        <div className={clsx('margin-bottom--md', styles.showcaseFavoriteHeader)}>
+          <SearchBar />
+        </div>
+        <ul className={clsx('clean-list', styles.showcaseList)}>
+          {filteredUsers.map((user) => (
+            <ShowcaseCard key={user.title} user={user} />
+          ))}
+        </ul>
+      </div>
+      {/* {filteredUsers.length === sortedUsers.length ? (
         <>
           <div className={styles.showcaseFavorite}>
             <div className="container">
@@ -273,7 +283,7 @@ function ShowcaseCards() {
             ))}
           </ul>
         </div>
-      )}
+      )} */}
     </section>
   );
 }
