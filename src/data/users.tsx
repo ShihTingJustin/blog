@@ -43,6 +43,7 @@ export type TagType =
   | 'favorite'
   | 'javascript'
   | 'typescript'
+  | 'i18n'
   | 'react'
   | 'next'
   | 'redux'
@@ -64,15 +65,25 @@ export type TagType =
   | 'firebase'
   | 'aws'
   | 'gcp'
+  | 'netlify'
   | 'mongodb'
   | 'product'
   | 'template'
   | 'design'
-  | 'i18n';
+  | 'docusaurus';
 
 // Add sites to this list
 // prettier-ignore
 const Users: User[] = [
+  {
+    title: translate({ id: 'portfolio.case.blog.title' }),
+    description: translate({ id: 'portfolio.case.blog.description' }),
+    preview:
+      'https://user-images.githubusercontent.com/56827791/198873301-67ee7654-22e9-44e4-9a0f-c0596853a5d5.png',
+    website: 'https://sthdev.app/',
+    source: 'https://github.com/ShihTingJustin/blog',
+    tags: ['javascript', 'typescript', 'docusaurus', 'react', 'netlify'],
+  },
   {
     title: translate({ id: 'portfolio.case.url.shortener.title' }),
     description: translate({ id: 'portfolio.case.url.shortener.description' }),
@@ -94,23 +105,6 @@ const Users: User[] = [
       'product',
       'design',
     ],
-  },
-  {
-    title: 'AI-Speaker',
-    description: 'Local, reliable, fast and private Audio and IoT gate.',
-    preview: require('./portfolio/aispeaker.png'),
-    website: 'https://ai-speaker.com/',
-    source: 'https://github.com/sviete/AIS-WWW',
-    tags: ['react'],
-  },
-  {
-    title: 'Aide Jeune',
-    description:
-      'French Discord server that helps young people who have been bullied or feel bad about themselves',
-    preview: require('./portfolio/aide_jeune.png'),
-    website: 'https://aidejeune.fr',
-    source: 'https://aidejeune.fr',
-    tags: ['favorite'],
   },
 
   /*
@@ -155,6 +149,13 @@ export const Tags: { [type in TagType]: Tag } = {
       id: 'portfolio.filters.tag.typescript.description',
     }),
     color: '#087ea4',
+  },
+  i18n: {
+    label: translate({ id: 'portfolio.filters.tag.i18n.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.i18n.description',
+    }),
+    color: '#d3adf7',
   },
   react: {
     label: translate({ id: 'portfolio.filters.tag.react.label' }),
@@ -303,6 +304,13 @@ export const Tags: { [type in TagType]: Tag } = {
     }),
     color: '#EA4335',
   },
+  netlify: {
+    label: translate({ id: 'portfolio.filters.tag.netlify.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.netlify.description',
+    }),
+    color: '#00AD9F',
+  },
   mongodb: {
     label: translate({ id: 'portfolio.filters.tag.mongodb.label' }),
     description: translate({
@@ -310,12 +318,12 @@ export const Tags: { [type in TagType]: Tag } = {
     }),
     color: '#00ED64',
   },
-  i18n: {
-    label: translate({ id: 'portfolio.filters.tag.i18n.label' }),
+  docusaurus: {
+    label: translate({ id: 'portfolio.filters.tag.docusaurus.label' }),
     description: translate({
-      id: 'portfolio.filters.tag.i18n.description',
+      id: 'portfolio.filters.tag.docusaurus.description',
     }),
-    color: '#d3adf7',
+    color: '#25c2a0',
   },
   product: {
     label: translate({ id: 'portfolio.filters.tag.product.label' }),

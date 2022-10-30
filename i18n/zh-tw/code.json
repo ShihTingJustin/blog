@@ -306,13 +306,13 @@
     "message": "JavaScript with syntax for types.",
     "description": "The description of typescript tag in portfolio page"
   },
-  "portfolio.filters.tag.node.label": {
-    "message": "Node.js",
-    "description": "The label of node tag in portfolio page"
+  "portfolio.filters.tag.i18n.label": {
+    "message": "i18n",
+    "description": "The label of i18n tag in portfolio page"
   },
-  "portfolio.filters.tag.node.description": {
-    "message": "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
-    "description": "The description of node tag in portfolio page"
+  "portfolio.filters.tag.i18n.description": {
+    "message": "",
+    "description": "The description of i18n tag in portfolio page"
   },
   "portfolio.filters.tag.react.label": {
     "message": "React",
@@ -418,6 +418,14 @@
     "message": "Next generation frontend tooling",
     "description": "The description of webpack tag in portfolio page"
   },
+  "portfolio.filters.tag.node.label": {
+    "message": "Node.js",
+    "description": "The label of node tag in portfolio page"
+  },
+  "portfolio.filters.tag.node.description": {
+    "message": "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    "description": "The description of node tag in portfolio page"
+  },
   "portfolio.filters.tag.express.label": {
     "message": "Express",
     "description": "The label of express tag in portfolio page"
@@ -475,6 +483,14 @@
     "message": "Modernise your apps and services on Google Cloud's scalable infrastructure.",
     "description": "The description of gcp tag in portfolio page"
   },
+  "portfolio.filters.tag.netlify.label": {
+    "message": "Netlify",
+    "description": "The label of gcp tag in portfolio page"
+  },
+  "portfolio.filters.tag.netlify.description": {
+    "message": "The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web.",
+    "description": "The description of gcp tag in portfolio page"
+  },
   "portfolio.filters.tag.mongodb.label": {
     "message": "MongoDB",
     "description": "The label of mongodb tag in portfolio page"
@@ -483,13 +499,13 @@
     "message": "",
     "description": "The description of mongodb tag in portfolio page"
   },
-  "portfolio.filters.tag.i18n.label": {
-    "message": "i18n",
-    "description": "The label of i18n tag in portfolio page"
+  "portfolio.filters.tag.docusaurus.label": {
+    "message": "Docusaurus",
+    "description": "The label of docusaurus tag in portfolio page"
   },
-  "portfolio.filters.tag.i18n.description": {
-    "message": "",
-    "description": "The description of i18n tag in portfolio page"
+  "portfolio.filters.tag.docusaurus.description": {
+    "message": "An optimized site generator in React. ",
+    "description": "The description of docusaurus tag in portfolio page"
   },
   "portfolio.filters.tag.product.label": {
     "message": "產品",
@@ -522,5 +538,13 @@
   "portfolio.case.url.shortener.description": {
     "message": "可以幫助你縮短網址並追蹤點擊次數。",
     "description": "The description of design tag in portfolio page"
+  },
+  "portfolio.case.blog.title": {
+    "message": "個人部落格",
+    "description": "The title of blog in portfolio page"
+  },
+  "portfolio.case.blog.description": {
+    "message": "個人部落格，裡面有我的技術筆記、文章及作品集",
+    "description": "The description of blog in portfolio page"
   }
 }
