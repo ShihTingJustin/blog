@@ -554,5 +554,12 @@
   "portfolio.case.login.firebase.react.description": {
     "message": "使用 Firebase Authentication 實作身份驗證，並部署於 Firebase Hosting。",
     "description": "The description of login.firebase.react in portfolio page"
+  },
+  "portfolio.page.title": {
+    "message": "作品集",
+    "description": "The title in portfolio page"
+  },
+  "portfolio.page.description": {
+    "message": ""
   }
 }

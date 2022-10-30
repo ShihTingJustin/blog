@@ -25,7 +25,7 @@ import ShowcaseTooltip from './_components/ShowcaseTooltip';
 
 import styles from './styles.module.css';
 
-const TITLE = translate({ message: 'Docusaurus Site Showcase' });
+const TITLE = translate({ id: 'portfolio.page.title' });
 const DESCRIPTION = translate({
   message: 'List of websites people are building with Docusaurus',
 });

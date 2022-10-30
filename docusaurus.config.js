@@ -4,11 +4,15 @@
 const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
+const siteUrl = 'https://www.sthdev.app';
+const siteTitle = "ShihTing's Blog";
+const siteDescription = 'Technical notes, articles and portfolio from a frontend developer';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "ShihTing's Blog",
-  tagline: "It's what you do in the dark that puts you in the light.",
-  url: 'https://www.sthdev.app/',
+  title: siteTitle,
+  tagline: siteDescription,
+  url: siteUrl,
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -56,8 +60,39 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/code_review_dark.png',
+      metadata: [
+        {
+          name: 'author',
+          content: 'ShihTing Huang',
+        },
+        {
+          name: 'description',
+          content: siteDescription,
+        },
+        {
+          property: 'og:title',
+          content: siteTitle,
+        },
+        {
+          property: 'og:site_name',
+          content: siteTitle,
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          property: 'og:url',
+          content: siteUrl,
+        },
+        {
+          property: 'og:description',
+          content: siteDescription,
+        },
+      ],
       navbar: {
-        title: "ShihTing's Blog",
+        title: siteTitle,
         logo: {
           alt: 'Site Logo',
           src: 'img/logo.svg',

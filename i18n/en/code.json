@@ -546,5 +546,12 @@
   "portfolio.case.login.firebase.react.description": {
     "message": "A simple account sign-up&login project built with React.js and Firebase, hosting on Firebase Hosting",
     "description": "The description of login.firebase.react in portfolio page"
+  },
+  "portfolio.page.title": {
+    "message": "Portfolio",
+    "description": "The title in portfolio page"
+  },
+  "portfolio.page.description": {
+    "message": ""
   }
 }
