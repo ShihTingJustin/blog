@@ -281,5 +281,230 @@
   "portfolio.filters.resultCount.plurals": {
     "message": "1 site|{sitesCount} sites",
     "description": "The filter result of portfolio page"
+  },
+  "portfolio.filters.tag.favorite.label": {
+    "message": "Favorite",
+    "description": "The label of like tag in portfolio page"
+  },
+  "portfolio.filters.tag.favorite.description": {
+    "message": "完成度較高的作品",
+    "description": "The description of like tag in portfolio page"
+  },
+  "portfolio.filters.tag.javascript.label": {
+    "message": "JavaScript",
+    "description": "The label of javascript tag in portfolio page"
+  },
+  "portfolio.filters.tag.javascript.description": {
+    "message": "JavaScript with syntax for types.",
+    "description": "The description of javascript tag in portfolio page"
+  },
+  "portfolio.filters.tag.typescript.label": {
+    "message": "TypeScript",
+    "description": "The label of typescript tag in portfolio page"
+  },
+  "portfolio.filters.tag.typescript.description": {
+    "message": "JavaScript with syntax for types.",
+    "description": "The description of typescript tag in portfolio page"
+  },
+  "portfolio.filters.tag.node.label": {
+    "message": "Node.js",
+    "description": "The label of node tag in portfolio page"
+  },
+  "portfolio.filters.tag.node.description": {
+    "message": "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    "description": "The description of node tag in portfolio page"
+  },
+  "portfolio.filters.tag.react.label": {
+    "message": "React",
+    "description": "The label of react tag in portfolio page"
+  },
+  "portfolio.filters.tag.react.description": {
+    "message": "React.js, a JavaScript library for building user interfaces.",
+    "description": "The description of react tag in portfolio page"
+  },
+  "portfolio.filters.tag.next.label": {
+    "message": "Next.js",
+    "description": "The label of next tag in portfolio page"
+  },
+  "portfolio.filters.tag.next.description": {
+    "message": "An open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites.",
+    "description": "The description of next tag in portfolio page"
+  },
+  "portfolio.filters.tag.redux.label": {
+    "message": "Redux",
+    "description": "The label of react tag in portfolio page"
+  },
+  "portfolio.filters.tag.redux.description": {
+    "message": "A predictable state container for JS apps",
+    "description": "The description of react tag in portfolio page"
+  },
+  "portfolio.filters.tag.vue.label": {
+    "message": "Vue",
+    "description": "The label of vue tag in portfolio page"
+  },
+  "portfolio.filters.tag.vue.description": {
+    "message": "The progressive JavaScript framework.",
+    "description": "The description of vue tag in portfolio page"
+  },
+  "portfolio.filters.tag.vuex.label": {
+    "message": "Vuex",
+    "description": "The label of vuex tag in portfolio page"
+  },
+  "portfolio.filters.tag.vuex.description": {
+    "message": "Vuex is a state management pattern + library for Vue.js applications.",
+    "description": "The description of vuex tag in portfolio page"
+  },
+  "portfolio.filters.tag.pinia.label": {
+    "message": "Pinia",
+    "description": "The label of pinia tag in portfolio page"
+  },
+  "portfolio.filters.tag.pinia.description": {
+    "message": "The Vue Store that you will enjoy using.",
+    "description": "The description of pinia tag in portfolio page"
+  },
+  "portfolio.filters.tag.tailwind.label": {
+    "message": "Tailwind",
+    "description": "The label of tailwind tag in portfolio page"
+  },
+  "portfolio.filters.tag.tailwind.description": {
+    "message": "Rapidly build modern websites without ever leaving your HTML.",
+    "description": "The description of tailwind tag in portfolio page"
+  },
+  "portfolio.filters.tag.bootstrap.label": {
+    "message": "Bootstrap",
+    "description": "The label of bootstrap tag in portfolio page"
+  },
+  "portfolio.filters.tag.bootstrap.description": {
+    "message": "Build fast, responsive sites with Bootstrap",
+    "description": "The description of bootstrap tag in portfolio page"
+  },
+  "portfolio.filters.tag.antd.label": {
+    "message": "Ant Design",
+    "description": "The label of antd tag in portfolio page"
+  },
+  "portfolio.filters.tag.antd.description": {
+    "message": "A design system for enterprise-level products.",
+    "description": "The description of antd tag in portfolio page"
+  },
+  "portfolio.filters.tag.mui.label": {
+    "message": "Material UI",
+    "description": "The label of mui tag in portfolio page"
+  },
+  "portfolio.filters.tag.mui.description": {
+    "message": "Move faster with intuitive React UI tools",
+    "description": "The description of mui tag in portfolio page"
+  },
+  "portfolio.filters.tag.vite.label": {
+    "message": "Vite",
+    "description": "The label of vite tag in portfolio page"
+  },
+  "portfolio.filters.tag.vite.description": {
+    "message": "Next generation frontend tooling",
+    "description": "The description of vite tag in portfolio page"
+  },
+  "portfolio.filters.tag.webpack.label": {
+    "message": "Webpack",
+    "description": "The label of webpack tag in portfolio page"
+  },
+  "portfolio.filters.tag.webpack.description": {
+    "message": "Next generation frontend tooling",
+    "description": "The description of webpack tag in portfolio page"
+  },
+  "portfolio.filters.tag.express.label": {
+    "message": "Express",
+    "description": "The label of express tag in portfolio page"
+  },
+  "portfolio.filters.tag.express.description": {
+    "message": "Fast, unopinionated, minimalist web framework for Node.js",
+    "description": "The description of express tag in portfolio page"
+  },
+
+  "portfolio.filters.tag.testing.label": {
+    "message": "Testing",
+    "description": "The label of testing tag in portfolio page"
+  },
+  "portfolio.filters.tag.testing.description": {
+    "message": "",
+    "description": "The description of testing tag in portfolio page"
+  },
+  "portfolio.filters.tag.cicd.label": {
+    "message": "CI/CD",
+    "description": "The label of cicd tag in portfolio page"
+  },
+  "portfolio.filters.tag.cicd.description": {
+    "message": "The combined practices of continuous integration (CI) and (more often) continuous delivery or (less often) continuous deployment (CD).",
+    "description": "The description of cicd tag in portfolio page"
+  },
+  "portfolio.filters.tag.docker.label": {
+    "message": "Docker",
+    "description": "The label of docker tag in portfolio page"
+  },
+  "portfolio.filters.tag.docker.description": {
+    "message": "Docker is a platform designed to help developers build, share, and run modern applications.",
+    "description": "The description of docker tag in portfolio page"
+  },
+  "portfolio.filters.tag.firebase.label": {
+    "message": "Firebase",
+    "description": "The label of firebase tag in portfolio page"
+  },
+  "portfolio.filters.tag.firebase.description": {
+    "message": "An app development platform that helps you build and grow apps and games users love.",
+    "description": "The description of firebase tag in portfolio page"
+  },
+  "portfolio.filters.tag.aws.label": {
+    "message": "AWS",
+    "description": "The label of aws tag in portfolio page"
+  },
+  "portfolio.filters.tag.aws.description": {
+    "message": "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services.",
+    "description": "The description of aws tag in portfolio page"
+  },
+  "portfolio.filters.tag.gcp.label": {
+    "message": "GCP",
+    "description": "The label of gcp tag in portfolio page"
+  },
+  "portfolio.filters.tag.gcp.description": {
+    "message": "Modernise your apps and services on Google Cloud's scalable infrastructure.",
+    "description": "The description of gcp tag in portfolio page"
+  },
+  "portfolio.filters.tag.mongodb.label": {
+    "message": "MongoDB",
+    "description": "The label of mongodb tag in portfolio page"
+  },
+  "portfolio.filters.tag.mongodb.description": {
+    "message": "",
+    "description": "The description of mongodb tag in portfolio page"
+  },
+  "portfolio.filters.tag.i18n.label": {
+    "message": "i18n",
+    "description": "The label of i18n tag in portfolio page"
+  },
+  "portfolio.filters.tag.i18n.description": {
+    "message": "",
+    "description": "The description of i18n tag in portfolio page"
+  },
+  "portfolio.filters.tag.product.label": {
+    "message": "Product",
+    "description": "The label of product tag in portfolio page"
+  },
+  "portfolio.filters.tag.product.description": {
+    "message": "",
+    "description": "The description of product tag in portfolio page"
+  },
+  "portfolio.filters.tag.template.label": {
+    "message": "Template",
+    "description": "The label of template tag in portfolio page"
+  },
+  "portfolio.filters.tag.template.description": {
+    "message": "",
+    "description": "The description of template tag in portfolio page"
+  },
+  "portfolio.filters.tag.design.label": {
+    "message": "Design",
+    "description": "The label of design tag in portfolio page"
+  },
+  "portfolio.filters.tag.design.description": {
+    "message": "",
+    "description": "The description of design tag in portfolio page"
   }
 }

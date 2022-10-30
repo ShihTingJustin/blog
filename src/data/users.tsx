@@ -41,22 +41,34 @@ import { sortBy } from '@site/src/utils/jsUtils';
 export type TagType =
   // DO NOT USE THIS TAG: we choose sites to add to favorites
   | 'favorite'
-  // For open-source sites, a link to the source code is required.
-  // The source should be the *website's* source, not the project's source!
-  | 'opensource'
+  | 'javascript'
+  | 'typescript'
+  | 'node'
+  | 'react'
+  | 'next'
+  | 'redux'
+  | 'vue'
+  | 'vuex'
+  | 'pinia'
+  | 'scss'
+  | 'tailwind'
+  | 'bootstrap'
+  | 'antd'
+  | 'mui'
+  | 'vite'
+  | 'webpack'
+  | 'express'
+  | 'testing'
+  | 'cicd'
+  | 'docker'
+  | 'firebase'
+  | 'aws'
+  | 'gcp'
+  | 'mongodb'
   | 'product'
-  // Feel free to add the 'design' tag as long as there's _some_ level of
-  // CSS/swizzling.
+  | 'template'
   | 'design'
-  // Site must have more than one locale.
-  | 'i18n'
-  | 'versioning'
-  // Large sites are defined as those with > 200 pages, excluding versions.
-  | 'large'
-  | 'meta'
-  | 'personal'
-  // Right-to-left direction.
-  | 'rtl';
+  | 'i18n';
 
 // Add sites to this list
 // prettier-ignore
@@ -67,7 +79,7 @@ const Users: User[] = [
     preview: require('./portfolio/agilets.png'),
     website: 'https://agile-ts.org/',
     source: 'https://github.com/agile-ts/documentation',
-    tags: ['opensource', 'design'],
+    tags: ['react', 'design'],
   },
   {
     title: 'AI-Speaker',
@@ -75,7 +87,7 @@ const Users: User[] = [
     preview: require('./portfolio/aispeaker.png'),
     website: 'https://ai-speaker.com/',
     source: 'https://github.com/sviete/AIS-WWW',
-    tags: ['opensource'],
+    tags: ['react'],
   },
   {
     title: 'Aide Jeune',
@@ -83,8 +95,8 @@ const Users: User[] = [
       'French Discord server that helps young people who have been bullied or feel bad about themselves',
     preview: require('./portfolio/aide_jeune.png'),
     website: 'https://aidejeune.fr',
-    source: null,
-    tags: [],
+    source: 'https://aidejeune.fr',
+    tags: ['favorite'],
   },
 
   /*
@@ -110,95 +122,207 @@ export type Tag = {
 
 export const Tags: { [type in TagType]: Tag } = {
   favorite: {
-    label: translate({ message: 'Favorite' }),
+    label: translate({ id: 'portfolio.filters.tag.favorite.label' }),
     description: translate({
-      message: 'Our favorite Docusaurus sites that you must absolutely check out!',
-      id: 'showcase.tag.favorite.description',
+      id: 'portfolio.filters.tag.favorite.description',
     }),
     color: '#e9669e',
   },
-
-  opensource: {
-    label: translate({ message: 'Open-Source' }),
+  javascript: {
+    label: translate({ id: 'portfolio.filters.tag.javascript.label' }),
     description: translate({
-      message: 'Open-Source Docusaurus sites can be useful for inspiration!',
-      id: 'showcase.tag.opensource.description',
+      id: 'portfolio.filters.tag.javascript.description',
+    }),
+    color: '#f7df1e',
+  },
+  typescript: {
+    label: translate({ id: 'portfolio.filters.tag.typescript.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.typescript.description',
+    }),
+    color: '#087ea4',
+  },
+  node: {
+    label: translate({ id: 'portfolio.filters.tag.node.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.node.description',
+    }),
+    color: '#026e00',
+  },
+  react: {
+    label: translate({ id: 'portfolio.filters.tag.react.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.react.description',
+    }),
+    color: '#149eca',
+  },
+  next: {
+    label: translate({ id: 'portfolio.filters.tag.next.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.next.description',
+    }),
+    color: '#fff',
+  },
+  redux: {
+    label: translate({ id: 'portfolio.filters.tag.redux.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.redux.description',
+    }),
+    color: '#764abc',
+  },
+  vue: {
+    label: translate({ id: 'portfolio.filters.tag.vue.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.vue.description',
+    }),
+    color: '#42b883',
+  },
+  vuex: {
+    label: translate({ id: 'portfolio.filters.tag.vuex.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.vuex.description',
+    }),
+    color: '#42b883',
+  },
+  pinia: {
+    label: translate({ id: 'portfolio.filters.tag.pinia.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.pinia.description',
+    }),
+    color: '#ffd859',
+  },
+  scss: {
+    label: translate({ id: 'portfolio.filters.tag.scss.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.scss.description',
+    }),
+    color: '#bf4080',
+  },
+  tailwind: {
+    label: translate({ id: 'portfolio.filters.tag.tailwind.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.tailwind.description',
+    }),
+    color: '#0ea5e9',
+  },
+  bootstrap: {
+    label: translate({ id: 'portfolio.filters.tag.bootstrap.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.bootstrap.description',
+    }),
+    color: '#712cf9',
+  },
+  antd: {
+    label: translate({ id: 'portfolio.filters.tag.antd.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.antd.description',
+    }),
+    color: '#1890ff',
+  },
+  mui: {
+    label: translate({ id: 'portfolio.filters.tag.mui.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.mui.description',
+    }),
+    color: '#007fff',
+  },
+  vite: {
+    label: translate({ id: 'portfolio.filters.tag.vite.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.vite.description',
+    }),
+    color: '#9699ff',
+  },
+  webpack: {
+    label: translate({ id: 'portfolio.filters.tag.webpack.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.webpack.description',
+    }),
+    color: '#8dd6f9',
+  },
+  express: {
+    label: translate({ id: 'portfolio.filters.tag.express.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.express.description',
+    }),
+    color: '#fff',
+  },
+  testing: {
+    label: translate({ id: 'portfolio.filters.tag.testing.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.testing.description',
+    }),
+    color: '#15c213',
+  },
+  cicd: {
+    label: translate({ id: 'portfolio.filters.tag.cicd.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.cicd.description',
     }),
     color: '#39ca30',
   },
-
-  product: {
-    label: translate({ message: 'Product' }),
+  docker: {
+    label: translate({ id: 'portfolio.filters.tag.docker.label' }),
     description: translate({
-      message: 'Docusaurus sites associated to a commercial product!',
-      id: 'showcase.tag.product.description',
+      id: 'portfolio.filters.tag.docker.description',
     }),
-    color: '#dfd545',
+    color: '#2496ed',
   },
-
-  design: {
-    label: translate({ message: 'Design' }),
+  firebase: {
+    label: translate({ id: 'portfolio.filters.tag.firebase.label' }),
     description: translate({
-      message: 'Beautiful Docusaurus sites, polished and standing out from the initial template!',
-      id: 'showcase.tag.design.description',
+      id: 'portfolio.filters.tag.firebase.description',
     }),
-    color: '#a44fb7',
+    color: '#edc742',
   },
-
+  aws: {
+    label: translate({ id: 'portfolio.filters.tag.aws.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.aws.description',
+    }),
+    color: '#252F3E',
+  },
+  gcp: {
+    label: translate({ id: 'portfolio.filters.tag.gcp.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.gcp.description',
+    }),
+    color: '#EA4335',
+  },
+  mongodb: {
+    label: translate({ id: 'portfolio.filters.tag.mongodb.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.mongodb.description',
+    }),
+    color: '#00ED64',
+  },
   i18n: {
-    label: translate({ message: 'I18n' }),
+    label: translate({ id: 'portfolio.filters.tag.i18n.label' }),
     description: translate({
-      message:
-        'Translated Docusaurus sites using the internationalization support with more than 1 locale.',
-      id: 'showcase.tag.i18n.description',
+      id: 'portfolio.filters.tag.i18n.description',
     }),
-    color: '#127f82',
+    color: '#d3adf7',
   },
-
-  versioning: {
-    label: translate({ message: 'Versioning' }),
+  product: {
+    label: translate({ id: 'portfolio.filters.tag.product.label' }),
     description: translate({
-      message:
-        'Docusaurus sites using the versioning feature of the docs plugin to manage multiple versions.',
-      id: 'showcase.tag.versioning.description',
+      id: 'portfolio.filters.tag.product.description',
     }),
-    color: '#fe6829',
+    color: '#fa8c16',
   },
-
-  large: {
-    label: translate({ message: 'Large' }),
+  template: {
+    label: translate({ id: 'portfolio.filters.tag.template.label' }),
     description: translate({
-      message: 'Very large Docusaurus sites, including many more pages than the average!',
-      id: 'showcase.tag.large.description',
+      id: 'portfolio.filters.tag.template.description',
     }),
-    color: '#8c2f00',
+    color: '#ff7875',
   },
-
-  meta: {
-    label: translate({ message: 'Meta' }),
+  design: {
+    label: translate({ id: 'portfolio.filters.tag.design.label' }),
     description: translate({
-      message: 'Docusaurus sites of Meta (formerly Facebook) projects',
-      id: 'showcase.tag.meta.description',
+      id: 'portfolio.filters.tag.design.description',
     }),
-    color: '#4267b2', // Facebook blue
-  },
-
-  personal: {
-    label: translate({ message: 'Personal' }),
-    description: translate({
-      message: 'Personal websites, blogs and digital gardens built with Docusaurus',
-      id: 'showcase.tag.personal.description',
-    }),
-    color: '#14cfc3',
-  },
-
-  rtl: {
-    label: translate({ message: 'RTL Direction' }),
-    description: translate({
-      message: 'Docusaurus sites using the right-to-left reading direction support.',
-      id: 'showcase.tag.rtl.description',
-    }),
-    color: '#ffcfc3',
+    color: '#13c2c2',
   },
 };
 
