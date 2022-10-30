@@ -2,6 +2,8 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+<img width="2560" alt="blog-preview" src="https://user-images.githubusercontent.com/56827791/198873301-67ee7654-22e9-44e4-9a0f-c0596853a5d5.png">
+
 ### Installation
 
 ```
