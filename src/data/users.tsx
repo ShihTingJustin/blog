@@ -43,7 +43,6 @@ export type TagType =
   | 'favorite'
   | 'javascript'
   | 'typescript'
-  | 'node'
   | 'react'
   | 'next'
   | 'redux'
@@ -57,6 +56,7 @@ export type TagType =
   | 'mui'
   | 'vite'
   | 'webpack'
+  | 'node'
   | 'express'
   | 'testing'
   | 'cicd'
@@ -74,12 +74,26 @@ export type TagType =
 // prettier-ignore
 const Users: User[] = [
   {
-    title: 'AgileTs',
-    description: 'Global State and Logic Framework for reactive Applications',
-    preview: require('./portfolio/agilets.png'),
-    website: 'https://agile-ts.org/',
-    source: 'https://github.com/agile-ts/documentation',
-    tags: ['react', 'design'],
+    title: translate({ id: 'portfolio.case.url.shortener.title' }),
+    description: translate({ id: 'portfolio.case.url.shortener.description' }),
+    preview:
+      'https://camo.githubusercontent.com/70b6dd0b726034a2e3e9ff25a2ae3bf31d6bdc9e1f1286071e18abd52c070857/68747470733a2f2f692e696d6775722e636f6d2f3644564e7236652e6a7067',
+    website: 'https://shihtingjustin.github.io/url_shortener_vue/#/',
+    source: 'https://github.com/ShihTingJustin/url_shortener_vue',
+    tags: [
+      'javascript',
+      'vue',
+      'vuex',
+      'bootstrap',
+      'node',
+      'express',
+      'mongodb',
+      'testing',
+      'docker',
+      'cicd',
+      'product',
+      'design',
+    ],
   },
   {
     title: 'AI-Speaker',
@@ -141,13 +155,6 @@ export const Tags: { [type in TagType]: Tag } = {
       id: 'portfolio.filters.tag.typescript.description',
     }),
     color: '#087ea4',
-  },
-  node: {
-    label: translate({ id: 'portfolio.filters.tag.node.label' }),
-    description: translate({
-      id: 'portfolio.filters.tag.node.description',
-    }),
-    color: '#026e00',
   },
   react: {
     label: translate({ id: 'portfolio.filters.tag.react.label' }),
@@ -239,6 +246,13 @@ export const Tags: { [type in TagType]: Tag } = {
       id: 'portfolio.filters.tag.webpack.description',
     }),
     color: '#8dd6f9',
+  },
+  node: {
+    label: translate({ id: 'portfolio.filters.tag.node.label' }),
+    description: translate({
+      id: 'portfolio.filters.tag.node.description',
+    }),
+    color: '#026e00',
   },
   express: {
     label: translate({ id: 'portfolio.filters.tag.express.label' }),

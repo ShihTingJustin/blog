@@ -506,5 +506,13 @@
   "portfolio.filters.tag.design.description": {
     "message": "",
     "description": "The description of design tag in portfolio page"
+  },
+  "portfolio.case.url.shortener.title": {
+    "message": "URL Shortener",
+    "description": "The label of design tag in portfolio page"
+  },
+  "portfolio.case.url.shortener.description": {
+    "message": "You can create short form url for your original url and track click times of it.",
+    "description": "The description of design tag in portfolio page"
   }
 }

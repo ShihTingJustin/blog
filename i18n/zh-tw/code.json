@@ -514,5 +514,13 @@
   "portfolio.filters.tag.design.description": {
     "message": "",
     "description": "The description of design tag in portfolio page"
+  },
+  "portfolio.case.url.shortener.title": {
+    "message": "短網址產生器",
+    "description": "The label of design tag in portfolio page"
+  },
+  "portfolio.case.url.shortener.description": {
+    "message": "可以幫助你縮短網址並追蹤點擊次數。",
+    "description": "The description of design tag in portfolio page"
   }
 }
