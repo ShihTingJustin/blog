@@ -85,6 +85,25 @@ const Users: User[] = [
     tags: ['javascript', 'typescript', 'docusaurus', 'react', 'netlify'],
   },
   {
+    title: translate({ id: 'portfolio.case.login.firebase.react.title' }),
+    description: translate({ id: 'portfolio.case.login.firebase.react.description' }),
+    preview:
+      'https://user-images.githubusercontent.com/56827791/198875487-5aa00f1f-7cda-4358-8e91-b41b5eee0b84.png',
+    website: 'https://login-firebase-react-b3914.web.app/login',
+    source: '',
+    tags: [
+      'typescript',
+      'react',
+      'redux',
+      'scss',
+      'tailwind',
+      'antd',
+      'cicd',
+      'product',
+      'firebase',
+    ],
+  },
+  {
     title: translate({ id: 'portfolio.case.url.shortener.title' }),
     description: translate({ id: 'portfolio.case.url.shortener.description' }),
     preview:

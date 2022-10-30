@@ -546,5 +546,13 @@
   "portfolio.case.blog.description": {
     "message": "個人部落格，裡面有我的技術筆記、文章及作品集",
     "description": "The description of blog in portfolio page"
+  },
+  "portfolio.case.login.firebase.react.title": {
+    "message": "Firebase 身份驗證",
+    "description": "The title of login.firebase.react in portfolio page"
+  },
+  "portfolio.case.login.firebase.react.description": {
+    "message": "使用 Firebase Authentication 實作身份驗證，並部署於 Firebase Hosting。",
+    "description": "The description of login.firebase.react in portfolio page"
   }
 }

@@ -538,5 +538,13 @@
   "portfolio.case.blog.description": {
     "message": "My blog with technical notes, articles and portfolio.",
     "description": "The description of blog in portfolio page"
+  },
+  "portfolio.case.login.firebase.react.title": {
+    "message": "Firebase Authentication",
+    "description": "The title of login.firebase.react in portfolio page"
+  },
+  "portfolio.case.login.firebase.react.description": {
+    "message": "A simple account sign-up&login project built with React.js and Firebase, hosting on Firebase Hosting",
+    "description": "The description of login.firebase.react in portfolio page"
   }
 }
