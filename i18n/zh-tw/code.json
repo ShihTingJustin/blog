@@ -561,5 +561,13 @@
   },
   "portfolio.page.description": {
     "message": ""
+  },
+  "home.page.title": {
+    "message": "首頁",
+    "description": "The title in home page"
+  },
+  "home.page.description": {
+    "message": "",
+    "description": "The title in home page"
   }
 }
