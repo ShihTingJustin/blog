@@ -4,7 +4,7 @@
     "description": "The title in the navbar"
   },
   "item.label.Notes": {
-    "message": "筆記",
+    "message": "技術筆記",
     "description": "Navbar item with label Notes"
   },
   "item.label.Blog": {
