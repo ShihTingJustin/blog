@@ -1,0 +1,253 @@
+---
+slug: 2022-11-02-git-note
+sidebar_position: 6
+title: 'Git 指令'
+tags: [git, command]
+---
+
+commit 寫法
+https://medium.com/@duidae/code-%E3%81%AE-%E6%96%B7%E6%8D%A8%E9%9B%A2-%E9%87%8D%E6%A7%8B-refactoring-ch3-2983e8c0a2a3
+
+[cheatsheet](https://dev.to/doabledanny/git-cheat-sheet-50-commands-free-pdf-and-poster-4gcn)
+
+用動畫解釋常見的 Git command [🌳🚀 CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1?fbclid=IwAR1sPBm8TOym6S9uiW8DXZfftZWyvydygKKZU1YcX2vBheJUjwOgEwLkIIA)
+
+[Git與Github-30天學習歷程](https://ithelp.ithome.com.tw/users/20119923/ironman/2232)
+
+[git credential](https://chenjinny.medium.com/git-setting-on-macos-learning-notes-21c98a8aa700)
+
+## cherry-pick
+
+
+
+## rebase
+
+git log --oneline
+
+git rebase -i [commit]
+
+solve conflict
+git rebase --abort
+
+git rebase --continue
+
+commit action
+pick
+squash
+edit
+drop
+reword
+
+```
+  8 # Commands:
+  9 # p, pick <commit> = use commit
+ 10 # r, reword <commit> = use commit, but edit the commit message
+ 11 # e, edit <commit> = use commit, but stop for amending
+ 12 # s, squash <commit> = use commit, but meld into previous commit
+ 13 # f, fixup <commit> = like "squash", but discard this commit's log message
+ 14 # x, exec <command> = run command (the rest of the line) using shell
+ 15 # b, break = stop here (continue rebase later with 'git rebase --continue')
+ 16 # d, drop <commit> = remove commit
+ 17 # l, label <label> = label current HEAD with a name
+ 18 # t, reset <label> = reset HEAD to a label
+ 19 # m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+ 20 # .       create a merge commit using the original merge commit's
+ 21 # .       message (or the oneline, if no original merge commit was
+ 22 # .       specified). Use -c <commit> to reword the commit message.
+```
+
+#### 取消這次 rebase
+git reset ORIG_HEAD --hard
+
+## stash
+git stash 暫存儲存當前目錄
+git stash pop 還原暫存
+git stash pop stash@{n}
+git stash list 瀏覽 git stash 列表
+
+solve conflict
+git add
+
+刪除 stash 暫存
+git stash drop 清除最新暫存
+git stash clear 清除全部暫存
+
+https://zlargon.gitbooks.io/git-tutorial/content/advanced/stash.html
+
+https://kingofamani.gitbooks.io/git-teach/content/chapter_3_branch/stash.html
+
+## pull with many conflicts
+
+git reset --hard
+
+https://kingofamani.gitbooks.io/git-teach/content/chapter_2/git_q_and_a.html
+
+## git clone 特定版本
+https://ephrain.net/git-%E8%AE%93-git-clone-%E5%8F%AA%E8%A4%87%E8%A3%BD%E7%89%B9%E5%AE%9A%E7%9A%84%E5%88%86%E6%94%AF%E8%B3%87%E6%96%99/
+
+https://blog.csdn.net/qq_30669833/article/details/105422803
+
+[Reset、Revert 跟 Rebase 指令有什麼差別？](https://gitbook.tw/chapters/rewrite-history/reset-revert-and-rebase.html)
+
+[想要刪除某幾個 Commit 或是調整 Commit 的順序](https://gitbook.tw/chapters/rewrite-history/remove-and-reorder-commit.html)
+
+[git 修改已提交的內容](https://kknews.cc/zh-tw/code/g3vnyne.html)
+
+[Error: Cannot pull with rebase: You have unstaged changes](https://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes)
+
+## 合併 commit
+#### Rebase children of xxxxx interactively
+
+https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html
+
+![](https://i.imgur.com/pXa19kg.png)
+
+進入合併清單的 commit 會是右鍵選擇的 commit 之前的
+![](https://i.imgur.com/2VtKdUY.png)
+
+使用 Squash with previous commit 與前面的 commit 合併
+![](https://i.imgur.com/MjglGb8.png)
+一次合併兩個 commit ，想合併多個 commit 就要執行多次 Squash（也可以將不同的 commit 合併成不同組的新 commit）
+![](https://i.imgur.com/VK2X0CW.png)
+
+
+最上面是合併之後的 commit ，可以重新編輯 commit 內容
+![](https://i.imgur.com/9JvMiNa.png)
+
+確定之後就按下 ok
+
+然後 git push 會發現 master 與 origin/master 或 heroku/master 有差異無法 push
+![](https://i.imgur.com/NUQdSGU.png)
+
+![](https://i.imgur.com/p6qRNw6.png)
+
+
+可以使用強制的語法，直接用本地的 git 蓋過遠端的。
+
+```
+git push --force-with-lease
+```
+
+```
+git push origin HEAD:master --force
+```
+
+```
+git push --force heroku master
+```
+
+
+## config
+
+```
+git config <--global> user.name ""
+git config <--global> user.email ""
+```
+
+
+
+#### Reference
+https://www.youtube.com/watch?v=SF3IO_m9jdY
+https://fy98.com/2015/09/01/delete-git-server-commit/
+https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html
+https://www.atlassian.com/blog/sourcetree/interactive-rebase-sourcetree
+
+[git -amend](https://kknews.cc/zh-tw/code/g3vnyne.html)
+
+## merge vs. rebase
+[為什麼我愛用 rebase](https://billyyyyy3320.com/zh/2019/08/15/why-i-like-git-rebase/)
+
+[保哥](https://www.slideshare.net/WillHuangTW/git-merge-rebase)
+
+[猴子都能懂的Git](https://backlog.com/git-tutorial/tw/stepup/stepup2_8.html)
+
+```
+git clone -b <branchname> <remote-repo-url>
+```
+https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
+
+
+https://gitbook.tw/chapters/rewrite-history/reset-revert-and-rebase.html
+
+https://gitbook.tw/chapters/using-git/reset-commit.html
+
+https://bigboys-me.medium.com/%E8%AE%93%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A2%BC%E5%9B%9E%E5%88%B0%E9%81%8E%E5%8E%BB-git-reset-%E8%88%87-git-revert-%E7%9A%84%E7%94%A8%E8%99%95-6ba4b7545690
+
+https://noootown.wordpress.com/2015/06/19/git-first-use/
+
+https://cythilya.github.io/2018/05/29/git-merge-squash-vs-rebase-squash/
+
+
+https://www.conventionalcommits.org/en/v1.0.0-beta.3/
+
+https://www.cnblogs.com/chenjunjie12321/p/6876220.html
+
+
+## 設定 username useremail
+
+全域
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+
+```
+git config user.name "TW-Web-Justin Huang"
+git config user.email "justin.huang@shoalter.com"
+```
+
+如果想要在單獨的 directory 中設定，拿掉 `--global` 即可
+
+https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E5%88%9D%E6%AC%A1%E8%A8%AD%E5%AE%9A-Git
+
+
+[修改 commit 作者資訊](https://cynthiachuang.github.io/Change-the-Git-Commit-Author-for-the-Specific-Commits/)
+    
+    
+### commit style
+    
+```
+feat: 新增/修改功能 (feature)。
+
+ci: 部屬 (ci/cd)
+
+fix: 修補 bug (bug fix)。
+
+docs: 文件 (documentation)。
+
+style: 格式 (不影響程式碼運行的變動 white-space, formatting, missing semi colons, etc)。
+
+refactor: 重構 (既不是新增功能，也不是修補 bug 的程式碼變動)。
+
+perf: 改善效能 (A code change that improves performance)。
+
+test: 增加測試 (when adding missing tests)。
+
+chore: 建構程序或輔助工具的變動 (maintain)。
+
+revert: 撤銷回覆先前的 commit 例如：revert: type(scope): subject (回覆版本：xxxx)。
+    
+Header: <type>(<scope>): <subject>
+ - type: 代表 commit 的類別：feat, fix, docs, style, refactor, test, chore，必要欄位。
+ - scope 代表 commit 影響的範圍，例如資料庫、控制層、模板層等等，視專案不同而不同，為可選欄位。
+ - subject 代表此 commit 的簡短描述，不要超過 50 個字元，結尾不要加句號，為必要欄位。
+
+Body: 72-character wrapped. This should answer:
+ * Body 部份是對本次 Commit 的詳細描述，可以分成多行，每一行不要超過 72 個字元。
+ * 說明程式碼變動的項目與原因，還有與先前行為的對比。
+
+Footer: 
+ - 填寫任務編號（如果有的話）.
+ - BREAKING CHANGE（可忽略），記錄不兼容的變動，
+   以 BREAKING CHANGE: 開頭，後面是對變動的描述、以及變動原因和遷移方法。
+```
+
+
+### FAQ
+
+[Git Undo Merge – How to Revert the Last Merge Commit in Git](https://www.freecodecamp.org/news/git-undo-merge-how-to-revert-the-last-merge-commit-in-git/)
+
+### Reference
+[commitlint - Lint commit messages](https://commitlint.js.org/#/)
+
+[連猴子都能懂的Git入門指南 | 貝格樂（Backlog）](https://backlog.com/git-tutorial/tw/)
