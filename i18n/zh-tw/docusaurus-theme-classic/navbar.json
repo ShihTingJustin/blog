@@ -14,5 +14,9 @@
   "item.label.Portfolio": {
     "message": "作品集",
     "description": "Navbar item with label Portfolio"
+  },
+  "item.label.About": {
+    "message": "關於我",
+    "description": "Navbar item with label About"
   }
 }

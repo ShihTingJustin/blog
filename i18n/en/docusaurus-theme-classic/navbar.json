@@ -14,5 +14,9 @@
   "item.label.Portfolio": {
     "message": "Portfolio",
     "description": "Navbar item with label Portfolio"
+  },
+  "item.label.About": {
+    "message": "About",
+    "description": "Navbar item with label About"
   }
 }

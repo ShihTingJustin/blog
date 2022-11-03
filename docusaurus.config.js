@@ -116,6 +116,11 @@ const config = {
             position: 'left',
           },
           {
+            to: 'https://jhdev.pro/',
+            label: 'About',
+            position: 'left',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },
