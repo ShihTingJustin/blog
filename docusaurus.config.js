@@ -51,7 +51,7 @@ const config = {
           editUrl: 'https://github.com/ShihTingJustin/blog/tree/main/blog',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
@@ -208,6 +208,7 @@ const config = {
         disableInDev: true,
       }),
     ],
+    'docusaurus-plugin-sass',
   ],
 };
 
