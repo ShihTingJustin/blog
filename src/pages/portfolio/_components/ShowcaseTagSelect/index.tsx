@@ -18,7 +18,7 @@ import {toggleListItem} from '@site/src/utils/jsUtils';
 import type {TagType} from '@site/src/data/users';
 
 import {prepareUserState} from '../../index';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 interface Props extends ComponentProps<'input'> {
   icon: ReactElement<ComponentProps<'svg'>>;

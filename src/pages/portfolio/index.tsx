@@ -23,7 +23,7 @@ import ShowcaseFilterToggle, {
 import ShowcaseCard from './_components/ShowcaseCard';
 import ShowcaseTooltip from './_components/ShowcaseTooltip';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const TITLE = translate({ id: 'portfolio.page.title' });
 const DESCRIPTION = translate({

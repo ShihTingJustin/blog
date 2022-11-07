@@ -7,7 +7,7 @@
 
 import React, {type ReactNode, type ComponentProps} from 'react';
 import clsx from 'clsx';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export type SvgIconProps = ComponentProps<'svg'> & {
   viewBox?: string;

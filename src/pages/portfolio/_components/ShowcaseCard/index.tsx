@@ -20,7 +20,7 @@ import {
 } from '@site/src/data/users';
 import {sortBy} from '@site/src/utils/jsUtils';
 import Tooltip from '../ShowcaseTooltip/index';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const TagComp = React.forwardRef<HTMLLIElement, Tag>(
   ({label, color, description}, ref) => (
