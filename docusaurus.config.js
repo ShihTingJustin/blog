@@ -30,7 +30,17 @@ const config = {
     defaultLocale: 'zh-tw',
     locales: ['zh-tw', 'en'],
   },
+  // Put your custom environment here
+  customFields: {
+    algoliaApiKey: process.env.ALGOLIA_API_KEY,
+  },
+  // https://wiki.7wate.com/docs/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/Docusaurus%20%E6%90%AD%E5%BB%BA/#%E6%8E%A8%E9%80%81%E6%95%B0%E6%8D%AE
 
+  // https://weiyun0912.github.io/Wei-Docusaurus/docs/Docusaurus/Algolia/
+
+  // https://docusaurus.io/docs/deployment#using-environment-variables
+
+  // https://docusaurus.io/docs/search#using-algolia-docsearch
   presets: [
     [
       'classic',
