@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+require('dotenv').config();
 
 const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
@@ -29,10 +30,6 @@ const config = {
   i18n: {
     defaultLocale: 'zh-tw',
     locales: ['zh-tw', 'en'],
-  },
-  // Put your custom environment here
-  customFields: {
-    algoliaApiKey: process.env.ALGOLIA_API_KEY,
   },
   // https://wiki.7wate.com/docs/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/Docusaurus%20%E6%90%AD%E5%BB%BA/#%E6%8E%A8%E9%80%81%E6%95%B0%E6%8D%AE
 
@@ -76,6 +73,29 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: process.env.ALGOLIA_APP_ID,
+
+        // Public API key: it is safe to commit it
+        apiKey: process.env.ALGOLIA_API_KEY,
+
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
+      },
       image: 'img/code_review_dark.png',
       metadata: [
         {
