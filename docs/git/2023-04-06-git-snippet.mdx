@@ -1,0 +1,86 @@
+---
+slug: 2023-04-06-git-snippet
+sidebar_position: 1
+title: 'Git Snippet'
+tags: [git, snippet]
+---
+
+## Config
+### Get repository or global options
+```command
+git config --list
+git config --l
+```
+
+### Identity setup
+```command
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+you can also use `--local` to use this identity only in the directory
+```command
+git config --local user.name "John Doe"
+git config --local user.email johndoe@example.com
+```
+
+## Commit
+### Remove latest commit
+```command
+git reset HEAD^ --hard
+```
+
+## Branch
+### Reomve local branch
+```command
+git branch -D <branch>
+```
+
+### Reomve remote branch
+```command
+git push --delete <remote> <branch>
+```
+
+## Git Aliases
+```command
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.sp stash pop
+git config --global alias.st stash
+git config --global alias.pl pull
+```
+
+
+## Reset author information for all commits
+for all branch
+
+```command
+git filter-branch -f --env-filter '
+    GIT_AUTHOR_NAME='ShihTingJustin'
+    GIT_AUTHOR_EMAIL='justinhuang777@gmail.com'
+    GIT_COMMITTER_NAME='ShihTingJustin'
+    GIT_COMMITTER_EMAIL='justinhuang777@gmail.com'
+' -- --all
+```
+
+you could also use `HEAD`
+```command
+git filter-branch -f --env-filter '
+    GIT_AUTHOR_NAME='ShihTingJustin'
+    GIT_AUTHOR_EMAIL='justinhuang777@gmail.com'
+    GIT_COMMITTER_NAME='ShihTingJustin'
+    GIT_COMMITTER_EMAIL='justinhuang777@gmail.com'
+' HEAD
+```
+src: https://git-scm.com/docs/git-filter-branch
+
+---
+
+### Why are my contributions not showing up on my profile?
+
+make sure the email setting in git config is as same as GitHub email
+
+```command
+git config user.email
+```
+
+or read [GitHub Doc](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-graphs-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile)
