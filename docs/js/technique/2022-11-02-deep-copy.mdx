@@ -2,14 +2,16 @@
 slug: 2022-11-02-deep-copy
 sidebar_position: 6
 title: '深拷貝'
-tags: [身拷貝, deepCopy, deep, copy]
+tags: [深拷貝, deepCopy, deep, copy]
 ---
 
-## structureClone
-### 簡介
+## 物件的深拷貝(深層複製)是指其屬性和複製的來源物件的屬性不共享相同的引用（指向相同的底層值）的副本。因此，當您更改來源或副本時，可以確保不會導致其他物件也發生更改；也就是說，您不會意外地對來源或副本造成預期之外的更改。這種行為與淺層複製的行為形成對比，在淺層複製中，對來源或副本的更改可能也會導致其他物件的更改（因為兩個物件共享相同的引用）。
+
+### structureClone
+#### 簡介
 實際上，瀏覽器本身就有很多地方需要深度複製例如﹔將資料儲存在 IndexedDB 時序列化和反序列化。利用 postMessage() 將資料傳給 Web Worker 等情境都需要類似的處理。而內部其實是使用一種稱為結構複製的演算法，過去這功能並沒有提供給開發者，但現在我們可以使用 structuredClone() 了。
 
-### 功能與限制
+#### 功能與限制
 結構複製解決了大部分 `JSON.stringify()` 的問題，可以使用遞迴資料結構，JS 內建型別，效能也不錯。
 
 但還是有些限制
@@ -18,7 +20,7 @@ tags: [身拷貝, deepCopy, deep, copy]
 * Function﹔如果您的物件包涵了函式則會被移除
 * 不可複製﹔有些值是不可複製的例如 Error 和 DOM 節點
 
-### 其他深層複製方法
+#### 其他深層複製方法
 1. Lodash
 2. 轉JSON字串再轉回來
 ```javascript=
@@ -57,4 +59,4 @@ console.log(faultyClonedData.function) // undefined
 [JS 中的淺拷貝 (Shallow copy) 與深拷貝 (Deep copy) 原理與實作](https://www.programfarmer.com/articles/javaScript/javascript-shallow-copy-deep-copy)
 [[譯]在 JavaScript 使用 structuredClone 深度複製](https://andyyou.github.io/2021/12/19/javascript-structured-clone-2021/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral)
 [最新HTML规范——structuredClone深拷贝函数，能取代JSON或者lodash吗？](https://juejin.cn/post/7044934738431180830)
-
+[How to deep clone a JavaScript object](https://flaviocopes.com/how-to-clone-javascript-object/)
