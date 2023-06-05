@@ -9,19 +9,19 @@ const FeatureList = [
     title: <Translate id="body.feature.title.left">Technical note</Translate>,
     Svg: require('@site/static/img/code_review_dark.svg').default,
     description: <Translate id="body.feature.content.left"></Translate>,
-    path: '/docs/intro',
+    path: 'docs/intro',
   },
   {
     title: <Translate id="body.feature.title.center">Articles</Translate>,
     Svg: require('@site/static/img/programming_dark.svg').default,
     description: <Translate id="body.feature.content.center"></Translate>,
-    path: '/blog',
+    path: 'blog',
   },
   {
     title: <Translate id="body.feature.title.right">Portfolio</Translate>,
     Svg: require('@site/static/img/responsive_dark.svg').default,
     description: <Translate id="body.feature.content.right"></Translate>,
-    path: '/portfolio',
+    path: 'portfolio',
   },
 ];
 
@@ -29,7 +29,10 @@ function Feature({ Svg, title, description, path }) {
   const history = useHistory();
 
   return (
-    <div className={`${styles.feature} ${clsx('col col--4')}`} onClick={() => history.push(path)}>
+    <div
+      className={`${styles.feature} ${clsx('col col--4')}`}
+      onClick={() => history.push(history.location.pathname + path)}
+    >
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
