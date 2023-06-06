@@ -146,11 +146,11 @@ const config = {
             label: 'Blog',
             position: 'left',
           },
-          {
-            to: '/portfolio',
-            label: 'Portfolio',
-            position: 'left',
-          },
+          // {
+          //   to: '/portfolio',
+          //   label: 'Portfolio',
+          //   position: 'left',
+          // },
           {
             to: 'https://jhdev.pro/',
             label: 'About',

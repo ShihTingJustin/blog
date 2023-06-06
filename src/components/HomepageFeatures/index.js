@@ -17,12 +17,12 @@ const FeatureList = [
     description: <Translate id="body.feature.content.center"></Translate>,
     path: 'blog',
   },
-  {
-    title: <Translate id="body.feature.title.right">Portfolio</Translate>,
-    Svg: require('@site/static/img/responsive_dark.svg').default,
-    description: <Translate id="body.feature.content.right"></Translate>,
-    path: 'portfolio',
-  },
+  // {
+  //   title: <Translate id="body.feature.title.right">Portfolio</Translate>,
+  //   Svg: require('@site/static/img/responsive_dark.svg').default,
+  //   description: <Translate id="body.feature.content.right"></Translate>,
+  //   path: 'portfolio',
+  // },
 ];
 
 function Feature({ Svg, title, description, path }) {
@@ -30,7 +30,7 @@ function Feature({ Svg, title, description, path }) {
 
   return (
     <div
-      className={`${styles.feature} ${clsx('col col--4')}`}
+      className={`${styles.feature} ${clsx('col col--6')}`}
       onClick={() => history.push(history.location.pathname + path)}
     >
       <div className="text--center">
