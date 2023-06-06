@@ -267,11 +267,11 @@
     "description": "The title of the right feature in body"
   },
   "body.feature.content.left": {
-    "message": "在寫程式的過程中隨手記錄的筆記，或是網路資源的彙整，主要是讓自己方便查找。筆記內容以 Web 前端為主，以及少部分的 LeetCode 刷題、 App、後端、DevOps",
+    "message": "網頁開發過程中隨手記錄的筆記，或是網路資源的彙整，主要是讓自己方便查找。",
     "description": "The content of the left feature in body"
   },
   "body.feature.content.center": {
-    "message": "有明確技術主題並整理過後的文章，或是職涯發展心得文、面試文，希望讓搜尋到的人能夠獲得他所需要的資訊",
+    "message": "有明確主題並整理過的文章，主題包含技術、職涯發展、面試。",
     "description": "The content of the center feature in body"
   },
   "body.feature.content.right": {
@@ -434,7 +434,6 @@
     "message": "Fast, unopinionated, minimalist web framework for Node.js",
     "description": "The description of express tag in portfolio page"
   },
-
   "portfolio.filters.tag.testing.label": {
     "message": "Testing",
     "description": "The label of testing tag in portfolio page"

@@ -267,11 +267,11 @@
     "description": "The title of the right feature in body"
   },
   "body.feature.content.left": {
-    "message": "技術筆記",
+    "message": "Quick notes and internet resources integrations from my web development journey, designed mainly for my personal convenience and easy look-up.",
     "description": "The content of the left feature in body"
   },
   "body.feature.content.center": {
-    "message": "文章",
+    "message": "Articles with clear topics and organized content, including web techniques, career development, and interviews.",
     "description": "The content of the center feature in body"
   },
   "body.feature.content.right": {
@@ -426,7 +426,6 @@
     "message": "Fast, unopinionated, minimalist web framework for Node.js",
     "description": "The description of express tag in portfolio page"
   },
-
   "portfolio.filters.tag.testing.label": {
     "message": "Testing",
     "description": "The label of testing tag in portfolio page"
