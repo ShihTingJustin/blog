@@ -5,6 +5,15 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 <img width="2560" alt="blog-preview" src="https://user-images.githubusercontent.com/56827791/198873301-67ee7654-22e9-44e4-9a0f-c0596853a5d5.png">
 
+### Config
+|  path   | content  |
+|  ----  | ----  |
+| docusaurus.config.js | `siteUrl`, `siteTitle`, `siteDescription`, `navbar` |
+| src/components/HomepageFeatures/index.js | home page UI |
+
+
+
+
 ### Tech Stack
 * TypeScript
 * React
