@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
 const siteUrl = 'https://www.sthdev.app';
 const siteTitle = "Web Worker";
-const siteDescription = 'Technical notes, articles and portfolio from a frontend developer';
+const siteDescription = 'Two cents from a web worker.';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
