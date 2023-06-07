@@ -6,7 +6,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
 const siteUrl = 'https://www.sthdev.app';
-const siteTitle = "Web Worker";
+const siteTitle = 'Web Worker';
 const siteDescription = 'Two cents from a web worker.';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -95,6 +95,14 @@ const config = {
         searchPagePath: 'search',
 
         //... other Algolia params
+      },
+      giscus: {
+        repo: process.env.GISCUS_REPO,
+        repoId: process.env.GISCUS_REPO_ID,
+        category: process.env.GISCUS_CATEGORY,
+        categoryId: process.env.GISCUS_CATEGORY_ID,
+        theme: 'light',
+        darkTheme: 'dark',
       },
       image: 'img/code_review_dark.png',
       metadata: [
@@ -192,8 +200,7 @@ const config = {
                 href: 'https://reactjs.org',
               },
               {
-                label: 'Docusaurus',
-                href: 'https://docusaurus.io/',
+                html: `<a href="https://docusaurus.io/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildWithDocusaurus.png" /><a/>`,
               },
               {
                 html: `
@@ -205,7 +212,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ShihTing's Blog, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Web Worker, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
