@@ -96,6 +96,14 @@ const config = {
 
         //... other Algolia params
       },
+      giscus: {
+        repo: process.env.GISCUS_REPO,
+        repoId: process.env.GISCUS_REPO_ID,
+        category: process.env.GISCUS_CATEGORY,
+        categoryId: process.env.GISCUS_CATEGORY_ID,
+        theme: 'light',
+        darkTheme: 'dark',
+      },
       image: 'img/code_review_dark.png',
       metadata: [
         {
