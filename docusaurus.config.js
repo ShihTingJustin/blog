@@ -45,17 +45,19 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/ShihTingJustin/blog/tree/main/docs',
+          editUrl: 'https://github.com/ShihTingJustin/blog/tree/main/',
         },
         blog: {
           postsPerPage: 8,
           showReadingTime: true,
+          // showLastUpdateTime: true,
           truncateMarker: /<!--\s*(truncate)\s*-->/,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/ShihTingJustin/blog/tree/main/blog',
+          editUrl: 'https://github.com/ShihTingJustin/blog/tree/main/',
         },
         sitemap: {
           changefreq: 'weekly',
