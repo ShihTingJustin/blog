@@ -110,16 +110,7 @@ FC 不需要
 ## React 哲學
 > 有依賴資料的延伸的任何東西都要成為資料流的一部分
 
-過去在 CC 中寫了 class 的 method 使用了 this.props blablabla
-實際上這個 function 不會因為 props 改變而改變
-所以無法透過這個 function 辨識到資料流發生變化
-後續的同步就很容易漏掉
+過去在 CC 中寫了 class 的 method 使用了 this.props blablabla，實際上這個 function 不會因為 props 改變而改變，所以無法透過這個 function 辨識到資料流發生變化，因此後續的同步就很容易漏掉。
 
-FC想做的是只要 input props 固定
-output 就固定
-為了完美做到這件事
-必須讓所有用到原始資料的東西都參與資料流
-effect 用到 function
-function 用到資料
-function 要寫在 component 內就要用 useCallback
-來保證整個資料流 chain 不會斷掉
+FC想做的是只要 input props 固定，output 就固定。為了完美做到這件事，必須讓所有用到原始資料的東西都參與資料流，包含 effect 用到的 function
+、function 用到的資料、function 要寫在 component 內就要用 useCallback 來保證整個資料流 chain 不會斷掉。
