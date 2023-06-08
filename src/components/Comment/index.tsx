@@ -15,7 +15,7 @@ const defaultConfig: Partial<GiscusProps> & { darkTheme: string } = {
   reactionsEnabled: '1',
   emitMetadata: '0',
   inputPosition: 'top',
-  lang: 'zh-TW',
+  lang: 'en',
   theme: 'light',
   darkTheme: 'dark',
 };
@@ -32,7 +32,8 @@ export default function Comment(): JSX.Element {
   }
 
   giscus.theme = useColorMode().colorMode === 'dark' ? giscus.darkTheme : giscus.theme;
-  giscus.lang = i18n.currentLocale;
+  // use i18n.currentLocale directly will cause error about "Content Security Policy directive: "frame-ancestors 'self'" 
+  giscus.lang = i18n.currentLocale === 'en' ? 'en': 'zh-TW';
 
   return (
     <BrowserOnly fallback={<div>Loading Comments...</div>}>
