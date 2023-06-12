@@ -86,17 +86,17 @@ FC 不需要
 
 ### useCallback useMemo 讓由原始資料產生出來的延伸資料能夠完全的參與資料流，並以 dependencies chain 維持 useEffect 的同步可靠性
 
-## useReducer 是 dependencies chain 的合法作弊手段
+### useReducer 是 dependencies chain 的合法作弊手段
 從動作分離更新...
 
 
-## 以 dependencies 來控制 useEffect 執行邏輯的誤區
+### 以 dependencies 來控制 useEffect 執行邏輯的誤區
 * useEffect 的用途是同步資料到 effect，不是生命週期
 * FC & hooks 也沒有提供任生命週期的 API
 * useEffect 的 dependencies 是一種「忽略某些非必要的執行」的效能最佳化，而不是控制 effect 發生在特定的 component 生命週期，或特定的商業邏輯時機
 
 
-## Reusable state — React 18 的 useEffect 在 mount 時為何會執行兩次？
+### Reusable state — React 18 的 useEffect 在 mount 時為何會執行兩次？
 * component 必須設計得有足夠的彈性，多次 mount & unmount 也不會壞掉
 * Offscreen API
     * 讓 React 可以在 UI 切換時保留 component 的 local state 及對應的真實 DOM elements，像是把他們暫時隱藏，而不是真的移除
@@ -107,7 +107,7 @@ FC 不需要
 
 
 
-## React 哲學
+### React 哲學
 > 有依賴資料的延伸的任何東西都要成為資料流的一部分
 
 過去在 CC 中寫了 class 的 method 使用了 this.props blablabla，實際上這個 function 不會因為 props 改變而改變，所以無法透過這個 function 辨識到資料流發生變化，因此後續的同步就很容易漏掉。
